@@ -1,0 +1,19 @@
+{
+  "name": "Kontrakan Seruni 1",
+  "short_name": "Seruni 1",
+  "description": "Hunian nyaman & modern di Parung Bogor",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "assets/icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" },
+    { "src": "assets/icons/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml" }
+  ],
+  "categories": ["lifestyle", "travel"],
+  "lang": "id",
+  "screenshots": [
+    { "src": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=640", "sizes": "640x480", "type": "image/jpeg" }
+  ]
+}

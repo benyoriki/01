@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — Kontrakan Seruni 1</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+<!-- Login Screen -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logo">
+      <svg width="52" height="52" viewBox="0 0 56 56" fill="none">
+        <rect width="56" height="56" rx="16" fill="url(#lg1)"/>
+        <path d="M14 38L22 18L28 30L34 22L42 38" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="56" y2="56"><stop offset="0%" stop-color="#667eea"/><stop offset="100%" stop-color="#764ba2"/></linearGradient></defs>
+      </svg>
+    </div>
+    <h1>Admin Panel</h1>
+    <p>Kontrakan Seruni 1</p>
+    <div class="login-form">
+      <div class="login-field">
+        <i class="fas fa-user"></i>
+        <input type="text" id="loginUser" placeholder="Username" autocomplete="username" />
+      </div>
+      <div class="login-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="loginPass" placeholder="Password" autocomplete="current-password" />
+        <button type="button" id="togglePass" class="toggle-pass"><i class="fas fa-eye"></i></button>
+      </div>
+      <button id="loginBtn" class="btn-login">
+        <i class="fas fa-sign-in-alt"></i>
+        Masuk
+      </button>
+      <p class="login-back"><a href="index.html"><i class="fas fa-arrow-left"></i> Kembali ke Website</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Admin Dashboard -->
+<div id="adminApp" class="admin-app" style="display:none">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+          <rect width="56" height="56" rx="14" fill="url(#sb1)"/>
+          <path d="M14 38L22 18L28 30L34 22L42 38" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs><linearGradient id="sb1" x1="0" y1="0" x2="56" y2="56"><stop offset="0%" stop-color="#667eea"/><stop offset="100%" stop-color="#764ba2"/></linearGradient></defs>
+        </svg>
+        <span>Seruni <strong>Admin</strong></span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-item active" data-page="dashboard"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+      <a href="#" class="nav-item" data-page="rooms"><i class="fas fa-door-open"></i><span>Kelola Kamar</span></a>
+      <a href="#" class="nav-item" data-page="bookings"><i class="fas fa-calendar-check"></i><span>Booking</span></a>
+      <a href="#" class="nav-item" data-page="gallery"><i class="fas fa-images"></i><span>Galeri</span></a>
+      <a href="#" class="nav-item" data-page="testimonials"><i class="fas fa-star"></i><span>Testimoni</span></a>
+      <a href="#" class="nav-item" data-page="faq"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
+      <a href="#" class="nav-item" data-page="settings"><i class="fas fa-cog"></i><span>Pengaturan</span></a>
+      <a href="#" class="nav-item" data-page="activity"><i class="fas fa-history"></i><span>Aktivitas</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="admin-main" id="adminMain">
+    <!-- Top Bar -->
+    <header class="admin-topbar">
+      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <div class="topbar-title" id="pageTitle">Dashboard</div>
+      <div class="topbar-actions">
+        <button class="theme-btn" id="adminThemeToggle"><i class="fas fa-moon" id="adminThemeIcon"></i></button>
+        <a href="index.html" target="_blank" class="btn-view-site"><i class="fas fa-external-link-alt"></i> Lihat Website</a>
+        <div class="admin-avatar" id="adminAvatar">A</div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="admin-content" id="adminContent">
+      <!-- Injected by JS -->
+    </main>
+  </div>
+</div>
+
+<!-- Room Editor Modal -->
+<div class="a-modal-overlay" id="roomEditorModal">
+  <div class="a-modal">
+    <div class="a-modal-header">
+      <h3 id="roomEditorTitle">Tambah Kamar</h3>
+      <button class="a-modal-close" id="roomEditorClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="a-modal-body" id="roomEditorBody">
+      <div class="ae-grid">
+        <div class="form-g">
+          <label>Nama Kamar</label>
+          <input type="text" id="ae_name" placeholder="Contoh: Kamar Deluxe A1" />
+        </div>
+        <div class="form-g">
+          <label>Nomor Kamar</label>
+          <input type="text" id="ae_number" placeholder="Contoh: A-01" />
+        </div>
+        <div class="form-g">
+          <label>Harga/Bulan (Rp)</label>
+          <input type="number" id="ae_price" placeholder="900000" />
+        </div>
+        <div class="form-g">
+          <label>Harga/Tahun (Rp)</label>
+          <input type="number" id="ae_priceyear" placeholder="9500000" />
+        </div>
+        <div class="form-g">
+          <label>Luas (m²)</label>
+          <input type="number" id="ae_area" placeholder="12" />
+        </div>
+        <div class="form-g">
+          <label>Status</label>
+          <select id="ae_status">
+            <option value="kosong">Tersedia / Kosong</option>
+            <option value="terisi">Terisi</option>
+            <option value="booking">Di-booking</option>
+          </select>
+        </div>
+        <div class="form-g">
+          <label>Rating (1-5)</label>
+          <input type="number" id="ae_rating" min="1" max="5" step="0.1" placeholder="4.9" />
+        </div>
+        <div class="form-g">
+          <label>URL Foto Kamar</label>
+          <input type="url" id="ae_img" placeholder="https://..." />
+        </div>
+        <div class="form-g full">
+          <label>Deskripsi</label>
+          <textarea id="ae_desc" rows="3" placeholder="Deskripsi lengkap kamar..."></textarea>
+        </div>
+        <div class="form-g full">
+          <label>Fasilitas (centang yang tersedia)</label>
+          <div class="fac-checks" id="ae_facilities">
+            <label class="fac-check"><input type="checkbox" value="wifi"><i class="fas fa-wifi"></i>WiFi</label>
+            <label class="fac-check"><input type="checkbox" value="km_dalam"><i class="fas fa-bath"></i>KM Dalam</label>
+            <label class="fac-check"><input type="checkbox" value="ac"><i class="fas fa-snowflake"></i>AC</label>
+            <label class="fac-check"><input type="checkbox" value="kipas"><i class="fas fa-fan"></i>Kipas</label>
+            <label class="fac-check"><input type="checkbox" value="kasur"><i class="fas fa-bed"></i>Kasur</label>
+            <label class="fac-check"><input type="checkbox" value="lemari"><i class="fas fa-archive"></i>Lemari</label>
+            <label class="fac-check"><input type="checkbox" value="dapur"><i class="fas fa-utensils"></i>Dapur</label>
+            <label class="fac-check"><input type="checkbox" value="parkir"><i class="fas fa-car"></i>Parkir</label>
+            <label class="fac-check"><input type="checkbox" value="cctv"><i class="fas fa-video"></i>CCTV</label>
+            <label class="fac-check"><input type="checkbox" value="listrik"><i class="fas fa-bolt"></i>Listrik</label>
+            <label class="fac-check"><input type="checkbox" value="air"><i class="fas fa-tint"></i>Air</label>
+          </div>
+        </div>
+        <div class="form-g full">
+          <label>Badge</label>
+          <div class="fac-checks">
+            <label class="fac-check"><input type="checkbox" id="ae_badge_popular" value="popular">Paling Diminati</label>
+            <label class="fac-check"><input type="checkbox" id="ae_badge_best" value="best-price">Harga Terbaik</label>
+            <label class="fac-check"><input type="checkbox" id="ae_badge_new" value="new">Baru Tersedia</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="a-modal-footer">
+      <button class="btn-a-cancel" id="roomEditorCancel">Batal</button>
+      <button class="btn-a-save" id="roomEditorSave"><i class="fas fa-save"></i> Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm Modal -->
+<div class="a-modal-overlay" id="confirmModal">
+  <div class="a-modal" style="max-width:400px">
+    <div class="a-modal-header">
+      <h3>Konfirmasi</h3>
+      <button class="a-modal-close" id="confirmClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="a-modal-body" id="confirmBody">
+      <p>Apakah kamu yakin?</p>
+    </div>
+    <div class="a-modal-footer">
+      <button class="btn-a-cancel" id="confirmCancel">Batal</button>
+      <button class="btn-a-danger" id="confirmOk">Hapus</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="adminToast" class="toast-container"></div>
+
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

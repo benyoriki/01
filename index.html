@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kontrakan Seruni 1 – Hunian Modern Parung Bogor</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Kontrakan & Kosan Premium Seruni 1 di Parung Bogor. Harga terjangkau, fasilitas lengkap, lokasi strategis. Booking sekarang!" />
+  <meta name="keywords" content="kontrakan parung bogor, kosan bogor, kontrakan seruni, sewa kamar bogor, kos murah parung" />
+  <meta name="author" content="Kontrakan Seruni 1" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kontrakan Seruni 1 – Hunian Modern Parung Bogor" />
+  <meta property="og:description" content="Hunian premium dengan fasilitas lengkap di Parung Bogor. Harga terbaik, lokasi strategis!" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200" />
+  <meta property="og:url" content="https://kontrakan-seruni.github.io" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kontrakan Seruni 1 Parung Bogor" />
+  <meta name="twitter:description" content="Hunian nyaman, harga terjangkau di Parung Bogor." />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Seruni 1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo" id="secretTrigger">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+          <rect width="56" height="56" rx="16" fill="url(#grad1)"/>
+          <path d="M14 38L22 18L28 30L34 22L42 38" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="56" y2="56">
+              <stop offset="0%" stop-color="#667eea"/>
+              <stop offset="100%" stop-color="#764ba2"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="loading-text">Seruni<span>1</span></p>
+      <div class="loading-bar"><div class="loading-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="navLogo">
+        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+          <rect width="56" height="56" rx="14" fill="url(#navGrad)"/>
+          <path d="M14 38L22 18L28 30L34 22L42 38" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="56" y2="56">
+              <stop offset="0%" stop-color="#667eea"/>
+              <stop offset="100%" stop-color="#764ba2"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Seruni <strong>1</strong></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#rooms" class="nav-link">Kamar</a></li>
+        <li><a href="#facilities" class="nav-link">Fasilitas</a></li>
+        <li><a href="#gallery" class="nav-link">Galeri</a></li>
+        <li><a href="#testimonials" class="nav-link">Ulasan</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#booking" class="btn-nav-cta">Booking</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-img" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>✦ Hunian Premium Parung Bogor</span>
+      </div>
+      <h1 class="hero-title reveal-up">
+        Temukan Hunian<br />
+        <span class="gradient-text">Nyaman & Modern</span><br />
+        Impianmu
+      </h1>
+      <p class="hero-sub reveal-up">
+        Kontrakan Seruni 1 — kamar bersih, fasilitas lengkap, lokasi strategis<br />
+        di Jalan Balai Desa Jabon Mekar, Parung, Bogor.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#rooms" class="btn-hero-primary">
+          <i class="fas fa-home"></i>
+          Lihat Kamar
+        </a>
+        <a href="#" id="heroWa" class="btn-hero-secondary">
+          <i class="fab fa-whatsapp"></i>
+          Hubungi WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="hero-stat">
+          <strong id="heroTotalRooms">12</strong>
+          <span>Total Kamar</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong id="heroEmptyRooms">4</strong>
+          <span>Kamar Tersedia</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>⭐ 4.9</strong>
+          <span>Rating Penghuni</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Stats Counter Section -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal-up">
+          <div class="stat-icon"><i class="fas fa-door-open"></i></div>
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">Total Kamar</div>
+        </div>
+        <div class="stat-card reveal-up" style="--delay:.1s">
+          <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-label">Kamar Kosong</div>
+        </div>
+        <div class="stat-card reveal-up" style="--delay:.2s">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number" data-target="856">0</div>
+          <div class="stat-label">Pengunjung Website</div>
+        </div>
+        <div class="stat-card reveal-up" style="--delay:.3s">
+          <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="stat-number" data-target="48">0</div>
+          <div class="stat-label">Total Booking</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="search-section" id="search">
+    <div class="container">
+      <div class="search-box reveal-up">
+        <div class="search-input-wrap">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Cari kamar berdasarkan nama atau fasilitas..." />
+        </div>
+        <div class="filter-chips">
+          <button class="chip active" data-filter="all">Semua</button>
+          <button class="chip" data-filter="kosong">Tersedia</button>
+          <button class="chip" data-filter="terisi">Terisi</button>
+          <button class="chip" data-filter="booking">Booking</button>
+        </div>
+        <div class="filter-row">
+          <select id="priceFilter" class="filter-select">
+            <option value="">Semua Harga</option>
+            <option value="0-700000">Di bawah Rp700k</option>
+            <option value="700000-1000000">Rp700k – Rp1jt</option>
+            <option value="1000000-1500000">Rp1jt – Rp1,5jt</option>
+            <option value="1500000-99999999">Di atas Rp1,5jt</option>
+          </select>
+          <select id="facilityFilter" class="filter-select">
+            <option value="">Semua Fasilitas</option>
+            <option value="wifi">WiFi</option>
+            <option value="ac">AC</option>
+            <option value="km_dalam">Kamar Mandi Dalam</option>
+            <option value="dapur">Dapur</option>
+            <option value="parkir">Parkir</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+  <section class="rooms-section" id="rooms">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Hunian Kami</span>
+        <h2>Pilih Kamar <span class="gradient-text">Terbaik</span></h2>
+        <p>Temukan kamar yang sesuai kebutuhan dan budgetmu</p>
+      </div>
+      <div class="rooms-grid" id="roomsGrid">
+        <!-- Rooms injected by JS -->
+      </div>
+      <div class="empty-state" id="emptyState" style="display:none">
+        <i class="fas fa-search"></i>
+        <p>Tidak ada kamar yang sesuai filter</p>
+        <button onclick="resetFilters()">Reset Filter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="facilities-section" id="facilities">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Fasilitas</span>
+        <h2>Lengkap & <span class="gradient-text">Berkualitas</span></h2>
+        <p>Semua yang kamu butuhkan sudah tersedia</p>
+      </div>
+      <div class="facilities-grid">
+        <div class="facility-card reveal-up" style="--delay:0s">
+          <div class="facility-icon"><i class="fas fa-wifi"></i></div>
+          <h3>WiFi Kencang</h3>
+          <p>Internet cepat di seluruh area kontrakan</p>
+        </div>
+        <div class="facility-card reveal-up" style="--delay:.08s">
+          <div class="facility-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>CCTV 24 Jam</h3>
+          <p>Keamanan terjamin sepanjang waktu</p>
+        </div>
+        <div class="facility-card reveal-up" style="--delay:.16s">
+          <div class="facility-icon"><i class="fas fa-car"></i></div>
+          <h3>Parkir Luas</h3>
+          <p>Area parkir motor & mobil tersedia</p>
+        </div>
+        <div class="facility-card reveal-up" style="--delay:.24s">
+          <div class="facility-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Dapur Bersama</h3>
+          <p>Fasilitas masak lengkap dan bersih</p>
+        </div>
+        <div class="facility-card reveal-up" style="--delay:.32s">
+          <div class="facility-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Listrik Token</h3>
+          <p>Listrik mandiri, bayar sesuai pemakaian</p>
+        </div>
+        <div class="facility-card reveal-up" style="--delay:.4s">
+          <div class="facility-icon"><i class="fas fa-tint"></i></div>
+          <h3>Air Bersih</h3>
+          <p>Pasokan air bersih sepanjang hari</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Galeri</span>
+        <h2>Lihat Lebih <span class="gradient-text">Dekat</span></h2>
+        <p>Foto nyata kondisi hunian kami</p>
+      </div>
+      <div class="gallery-slider" id="gallerySlider">
+        <div class="gallery-track" id="galleryTrack">
+          <!-- Injected by JS -->
+        </div>
+        <button class="gallery-btn prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="gallery-btn next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking-section" id="booking">
+    <div class="container">
+      <div class="booking-wrapper reveal-up">
+        <div class="booking-info">
+          <span class="section-badge">Booking Mudah</span>
+          <h2>Amankan Kamarmu<br /><span class="gradient-text">Sekarang</span></h2>
+          <p>Isi form booking, kami akan konfirmasi lewat WhatsApp dalam 1x24 jam.</p>
+          <div class="booking-features">
+            <div class="booking-feature"><i class="fas fa-check"></i> Gratis biaya administrasi</div>
+            <div class="booking-feature"><i class="fas fa-check"></i> Konfirmasi cepat via WhatsApp</div>
+            <div class="booking-feature"><i class="fas fa-check"></i> Bisa survei langsung sebelum deal</div>
+          </div>
+        </div>
+        <div class="booking-form-card">
+          <h3>Form Booking</h3>
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" id="bookName" placeholder="Masukkan nama lengkap" />
+          </div>
+          <div class="form-group">
+            <label>Nomor WhatsApp</label>
+            <input type="tel" id="bookWa" placeholder="Contoh: 081234567890" />
+          </div>
+          <div class="form-group">
+            <label>Pilih Kamar</label>
+            <select id="bookRoom">
+              <option value="">Pilih kamar yang diinginkan</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tanggal Masuk</label>
+              <input type="date" id="bookDate" />
+            </div>
+            <div class="form-group">
+              <label>Durasi Sewa</label>
+              <select id="bookDuration">
+                <option value="1 bulan">1 Bulan</option>
+                <option value="3 bulan">3 Bulan</option>
+                <option value="6 bulan">6 Bulan</option>
+                <option value="1 tahun">1 Tahun</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Catatan (opsional)</label>
+            <textarea id="bookNote" placeholder="Kebutuhan khusus, pertanyaan, dll..." rows="3"></textarea>
+          </div>
+          <button class="btn-booking-submit" id="bookingSubmit">
+            <i class="fab fa-whatsapp"></i>
+            Kirim via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Ulasan</span>
+        <h2>Kata Mereka <span class="gradient-text">yang Sudah Tinggal</span></h2>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">FAQ</span>
+        <h2>Pertanyaan <span class="gradient-text">Umum</span></h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Lokasi & Kontak</span>
+        <h2>Temukan <span class="gradient-text">Kami</span></h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal-up">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Alamat</strong>
+              <p id="contactAddress">Jl. Balai Desa Jabon Mekar, Kampung Sawah RT02/03, Jabon Mekar, Kec. Parung, Kabupaten Bogor, Jawa Barat 16330</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <p id="contactWa">+62 812-3456-7890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Jam Operasional</strong>
+              <p>Setiap hari: 07.00 – 21.00 WIB</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-route"></i></div>
+            <div>
+              <strong>Jarak dari Pusat Kota</strong>
+              <p>± 3 km dari Pasar Parung, 25 km dari Depok</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-container reveal-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d106.73!3d-6.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e920c703f187%3A0x12cb024fb56d925!2sKontrakan+Seruni+1!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+            width="100%" height="350" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" id="mapsEmbed">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="36" height="36" viewBox="0 0 56 56" fill="none">
+              <rect width="56" height="56" rx="14" fill="url(#footerGrad)"/>
+              <path d="M14 38L22 18L28 30L34 22L42 38" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="footerGrad" x1="0" y1="0" x2="56" y2="56">
+                  <stop offset="0%" stop-color="#667eea"/>
+                  <stop offset="100%" stop-color="#764ba2"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Seruni <strong>1</strong></span>
+          </div>
+          <p>Hunian nyaman, bersih, dan terjangkau di Parung Bogor. Tempat tinggal yang terasa seperti rumah sendiri.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <a href="#rooms">Kamar</a>
+          <a href="#facilities">Fasilitas</a>
+          <a href="#gallery">Galeri</a>
+          <a href="#booking">Booking</a>
+          <a href="#contact">Kontak</a>
+        </div>
+        <div class="footer-links">
+          <h4>Info</h4>
+          <a href="#faq">FAQ</a>
+          <a href="#testimonials">Ulasan</a>
+          <a href="#" id="footerRules">Peraturan Kos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Kontrakan Seruni 1, Parung Bogor. All rights reserved.</p>
+        <p class="footer-secret">Made with ❤️ for a better living</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" id="floatingWa" class="floating-wa" aria-label="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat Sekarang</span>
+  </a>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Room Modal -->
+  <div class="modal-overlay" id="roomModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+      <button class="lightbox-nav prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+      <img src="" alt="" id="lightboxImg" class="lightbox-img" />
+      <button class="lightbox-nav next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Rules Modal -->
+  <div class="modal-overlay" id="rulesModal">
+    <div class="modal-content">
+      <button class="modal-close" id="rulesModalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="rulesBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Bottom Nav Mobile -->
+  <nav class="bottom-nav">
+    <a href="#hero" class="bottom-nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="#rooms" class="bottom-nav-item"><i class="fas fa-door-open"></i><span>Kamar</span></a>
+    <a href="#gallery" class="bottom-nav-item"><i class="fas fa-images"></i><span>Galeri</span></a>
+    <a href="#booking" class="bottom-nav-item"><i class="fas fa-calendar-plus"></i><span>Booking</span></a>
+    <a href="#contact" class="bottom-nav-item"><i class="fas fa-map-marker-alt"></i><span>Lokasi</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
