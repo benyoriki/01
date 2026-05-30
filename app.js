@@ -199,6 +199,14 @@ function initNavbar() {
   const navbar = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('open');
+    navbar.classList.remove('menu-open');
+    if (navOverlay) navOverlay.classList.remove('show');
+  }
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) navbar.classList.add('scrolled');
@@ -216,17 +224,20 @@ function initNavbar() {
   });
 
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    const isOpen = !navLinks.classList.contains('open');
+    hamburger.classList.toggle('active', isOpen);
+    navLinks.classList.toggle('open', isOpen);
+    navbar.classList.toggle('menu-open', isOpen);
+    if (navOverlay) navOverlay.classList.toggle('show', isOpen);
   });
 
   // Close menu on nav link click
   navLinks.querySelectorAll('.nav-link').forEach(l => {
-    l.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('open');
-    });
+    l.addEventListener('click', closeMenu);
   });
+
+  // Close menu on overlay click
+  if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
   document.getElementById('backToTop').addEventListener('click', () => {
